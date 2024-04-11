@@ -76,3 +76,22 @@ body {
     justify-content: space-evenly;
     list-style-type: none;
 }
+
+#home-button{
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+    box-shadow: 2px 2px 2px #000000;
+    transition: all 0.5s;
+    text-decoration: none;
+    margin: 0 auto;
+    display: block;
+}
