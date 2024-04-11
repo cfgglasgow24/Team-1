@@ -1,28 +1,5 @@
 {% extends 'base.html' %}
 
-<head>
-    {% block head %}
-    <title>{% block quiztitle %}Quiz{% endblock %}</title>
-    {% endblock %}
-	<style>
-    	
-	body { 
-			background-color: #ABABAB;
-    		font-family: Arial, sans-serif;
-	}
-
-	.hide-me {
-		display: none;
-	}
-
-	img {
-		display: inline-block; 
-		margin-right: 10px;
-	}
-    </style>
-	
-</head>
-
 <body>
 
     {% block content %}
@@ -31,12 +8,16 @@
     <source src={{ url_for('static', filename = audiopath) }} type="audio/mpeg">
     </audio>
 	<p class="hide-me"> The letter you must identify is: </p>
-	<p>{{ question }} </p>
+	<p style=font-size:35px>{{ question }} </p>
 	<p class="hide-me">. The options are: </p>
 	{% for option in options %}
 	{% set filepath = "letters/" + option + ".jpg" %}
 	{% set caption = captions[loop.index - 1] %}
-        <button><img src={{ url_for('static', filename = filepath) }} alt="Button" alt=""></button>
+        {% if option == question %}
+        <a href="/quiz"><button ><img width="500" height="500" src={{ url_for('static', filename = filepath) }} alt="Button" alt=""></button></a>
+        {% else %}
+        <button ><img width="500" height="500" src={{ url_for('static', filename = filepath) }} alt="Button" alt=""></button>
+        {% endif %}
 	<p class="hide-me"> {{ caption }} </p>
 	{% endfor %}
     <script src="script.js"></script>

@@ -8,47 +8,29 @@
 </head>
 <body>
     
-        <audio controls autoplay>
+    <audio controls autoplay>
     
-    <source src=/static/popup_audio.mp3 type="audio/mpeg">
+    <source src=/static/quiz_audio.mp3 type="audio/mpeg">
     </audio>
-    <ul id="Settings-Holder">
-      <!--ScreenReader-->  
-    <li id="Screen-Reader">
-        <h3>Screenreader</h3>
-        <ul>
-            <li><button>On</button></li>
-            <li><button>Off</button></li>
-        </ul>
-   
-    <!--Text Size-->  
-    <li id="Text-Size">
-        <h3>Text Size</h3>
-        <ul>
-            <li><button onclick="increaseFontSize()">+</button></li>
-            <li><button>-</button></li>
-        </ul>
-
-    <!--Volume-->
-    <li id="Volume">
-        <h3>Volume</h3>
-        <ul>
-            <li><button>+</button></li>
-            <li><button>-</button></li>
-        </ul>
-    
-    <!--Text Boldness-->
-    <li id="Text-Boldness">    
-        <h3>Text Boldness</h3>
-        <ul>
-            <li><button>On</button></li>
-            <li><button>Off</button></li>
-
-    </ul>
-
-     <!--Home Button-->
-    <a href="/home"><button id="home-button">Go to Home</button></a>
-    <script src=/static/script.js></script>
+	<p class="hide-me"> The letter you must identify is: </p>
+	<p style=font-size:35px>K </p>
+	<p class="hide-me">. The options are: </p>
+	
+	
+	
+        
+        <a href="/quiz"><button ><img width="500" height="500" src=/static/letters/K.jpg alt="Button" alt=""></button></a>
+        
+	<p class="hide-me"> bend your right forefinger at right angles against their forefinger. </p>
+	
+	
+	
+        
+        <button ><img width="500" height="500" src=/static/letters/C.jpg alt="Button" alt=""></button>
+        
+	<p class="hide-me"> draw your right forefinger down their thumb and along the top of the outstretched forefinger. </p>
+	
+    <script src="script.js"></script>
     
 </body>
 </html>
