@@ -95,3 +95,14 @@ body {
     margin: 0 auto;
     display: block;
 }
+
+/* Quiz Deco */
+
+.hide-me{
+    display: none;
+}
+
+img {
+    display: inline-block; 
+    margin-right: 10px;
+}
