@@ -2,6 +2,10 @@
 
 <body>
     {% block content %}
+        <audio controls autoplay>
+    {% set audiopath = "popup_audio.mp3" %}
+    <source src={{ url_for('static', filename = audiopath) }} type="audio/mpeg">
+    </audio>
     <ul id="Settings-Holder">
       <!--ScreenReader-->  
     <li id="Screen-Reader">
@@ -15,7 +19,7 @@
     <li id="Text-Size">
         <h3>Text Size</h3>
         <ul>
-            <li><button>+</button></li>
+            <li><button onclick="increaseFontSize()">+</button></li>
             <li><button>-</button></li>
         </ul>
 
@@ -38,8 +42,10 @@
 
      <!--Home Button-->
     <a href="/home"><button id="home-button">Go to Home</button></a>
-    <script src="script.js"></script>
+    <script src={{ url_for('static', filename = "script.js") }}></script>
     {% endblock %}
+
+</ul>
     
 </body>
 </html>

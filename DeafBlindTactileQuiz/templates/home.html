@@ -2,6 +2,10 @@
 
 <body>
     {% block content %}
+        <audio controls autoplay>
+    {% set audiopath = "home_audio.mp3" %}
+    <source src={{ url_for('static', filename = audiopath) }} type="audio/mpeg">
+    </audio>
     <ul id="options-box">
         <a href="/quiz"><li>Quiz</li></a>
         <a href="/learn"><li>Learn</li></a>

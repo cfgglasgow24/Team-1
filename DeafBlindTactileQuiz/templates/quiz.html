@@ -26,6 +26,10 @@
 <body>
 
     {% block content %}
+    <audio controls autoplay>
+    {% set audiopath = "quiz_audio.mp3" %}
+    <source src={{ url_for('static', filename = audiopath) }} type="audio/mpeg">
+    </audio>
 	<p class="hide-me"> The letter you must identify is: </p>
 	<p>{{ question }} </p>
 	<p class="hide-me">. The options are: </p>

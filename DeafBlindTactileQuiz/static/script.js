@@ -6,6 +6,10 @@ function setFontSize(size) {
     fontSize = size;
 }
 
+function increaseFontSize()  {
+    setFontSize(fontSize + 10)
+}
+
 function setPalette(text, bg) {
     textColor = color;
     bgColor = bg;

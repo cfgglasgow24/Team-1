@@ -7,7 +7,7 @@ app = Flask(__name__, )
 
 @app.route('/')
 def accessibility():
-    sr.generate_mp3(render_template('popup.html'), "popup_audio.mp3")
+    sr.generate_mp3(render_template('popup.html'), "popup_audio.mp3", li_flag=True)
     return render_template('popup.html')
 
 
