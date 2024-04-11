@@ -9,7 +9,9 @@
 <body>
 
     {% block content %}
+	<p class="hide-me"> The letter you must identify is: </p>
 	<p>{{ question }} </p>
+	<p class="hide-me">. The options are: </p>
 	{% for option in options %}
 	{% set filepath = "letters/" + option + ".jpg" %}
 	{% set caption = captions[loop.index - 1] %}
