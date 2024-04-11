@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<head>
+    {% block head %}
+    <title>{% block quiztitle %}Quiz{% endblock %}</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <ul>
+        // the options 1 and 2 with images
+        <li><img src="static/1.png" alt="Option 1" />Option 1</a></li>
+        <li><img src="static/2.png" alt="Option 2" />Option 2</a></li>
+    </ul>
+
+    {% endblock %}
+</body>
+
+</html>

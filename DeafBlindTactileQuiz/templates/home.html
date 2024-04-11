@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<head>
+    {% block head %}
+    <title>{% block hometitle %}Our Web App!{% endblock %}</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <ul>
+        <li><a href="/quiz">Quiz</a></li>
+        <li><a href="/learn">Learn</a></li>
+    </ul>
+    {% endblock %}
+</body>
+
+</html>
