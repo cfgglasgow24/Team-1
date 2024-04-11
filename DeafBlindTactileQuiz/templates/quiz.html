@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+<head>
+    {% block head %}
+    <title>{% block quiztitle %}Quiz{% endblock %}</title>
+    {% endblock %}
+</head>
+
+<body>
+
+    {% block content %}
+	<p>{{ question }} </p>
+	{% for option in options %}
+	{% set filepath = "letters/" + option + ".jpg" %}
+	{% set caption = captions[loop.index] %}
+        <img src={{ url_for('static', filename = filepath) }} alt={{ caption }}/>
+	{% endfor %}
+    {% endblock %}
+</body>
+
+</html>
