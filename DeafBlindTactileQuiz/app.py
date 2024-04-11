@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import screenreader as sr
+import quiz as q
 
 app = Flask(__name__, )
 
@@ -11,9 +12,10 @@ def home():
 
 @app.route("/quiz/")
 def quiz():
-    question = "A"
-    options = ["A", "B"]
-    captions = ["The Letter A", "The Letter B"]
+    contextdict = q.quiz()
+    question = contextdict["correct letter"]
+    options = contextdict["random letters"]
+    captions = [contextdict["captions"][options[0]], contextdict["captions"][options[1]]]
     sr.main(render_template('quiz.html', options=options, question=question, captions=captions))
     return render_template('quiz.html', options=options, question=question, captions=captions)
 
