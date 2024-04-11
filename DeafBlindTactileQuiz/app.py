@@ -16,8 +16,9 @@ def quiz():
     question = contextdict["correct letter"]
     options = contextdict["random letters"]
     captions = [contextdict["captions"][options[0]], contextdict["captions"][options[1]]]
-    sr.main(render_template('quiz.html', options=options, question=question, captions=captions))
-    return render_template('quiz.html', options=options, question=question, captions=captions)
+    rendered_page = render_template('quiz.html', options=options, question=question, captions=captions)
+    sr.generate_mp3(rendered_page, "quiz_audio.mp3")
+    return rendered_page
 
 
 if __name__ == '__main__':
