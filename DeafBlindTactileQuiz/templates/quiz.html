@@ -15,7 +15,7 @@
 	{% for option in options %}
 	{% set filepath = "letters/" + option + ".jpg" %}
 	{% set caption = captions[loop.index - 1] %}
-    <button><img src={{ url_for('static', filename = filepath) }} alt={{ caption }}/></button>
+        <button><img src={{ url_for('static', filename = filepath) }} alt="Button" alt=""></button>
 	<p class="hide-me"> {{ caption }} </p>
 	{% endfor %}
     <script src="script.js"></script>

@@ -6,6 +6,11 @@ app = Flask(__name__, )
 
 
 @app.route('/')
+def accessibility():
+    return render_template('popup.html')
+
+
+@app.route('/home/')
 def home():
     return render_template('home.html')
 
@@ -16,9 +21,8 @@ def quiz():
     question = contextdict["correct letter"]
     options = contextdict["random letters"]
     captions = [contextdict["captions"][options[0]], contextdict["captions"][options[1]]]
-    rendered_page = render_template('quiz.html', options=options, question=question, captions=captions)
-    sr.generate_mp3(rendered_page, "quiz_audio.mp3")
-    return rendered_page
+    sr.generate_mp3(render_template('quiz.html', options=options, question=question, captions=captions), "quiz_audio.mp3")
+    return render_template('quiz.html', options=options, question=question, captions=captions)
 
 
 if __name__ == '__main__':
