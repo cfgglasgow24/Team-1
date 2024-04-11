@@ -1,17 +1,14 @@
 {% extends 'base.html' %}
-<head>
-    {% block head %}
-    <title>{% block hometitle %}Our Web App!{% endblock %}</title>
-    {% endblock %}
-</head>
 
 <body>
-
     {% block content %}
-    <ul>
-        <li><a href="/quiz">Quiz</a></li>
-        <li><a href="/learn">Learn</a></li>
+    <ul id="options-box">
+        <a href="/quiz"><li>Quiz</li></a>
+        <a href="/learn"><li>Learn</li></a>
     </ul>
+
+    <a href="/popup"><button id="settings-button">Settings</button></a>
+
     {% endblock %}
 </body>
 
