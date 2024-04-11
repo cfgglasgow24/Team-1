@@ -1,0 +1,97 @@
+body {
+    background-color: #ABABAB;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Menu Deco */
+
+#options-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#options-box a {
+    color: #000000;
+    font-size: 1.75em;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000000;
+    box-shadow: 2px 2px 2px #000000;
+    transition: all 0.5s;
+
+}
+
+#options-box a:hover {
+    font-size: 2.5em;
+}
+
+#options
+{
+    align-items: center;
+}
+
+#settings-button{
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+    box-shadow: 2px 2px 2px #000000;
+    transition: all 0.5s;
+    text-decoration: none;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Settings Deco */
+
+#Settings-Holder {
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#Screen-Reader {
+    display:flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#home-button{
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+    box-shadow: 2px 2px 2px #000000;
+    transition: all 0.5s;
+    text-decoration: none;
+    margin: 0 auto;
+    display: block;
+}

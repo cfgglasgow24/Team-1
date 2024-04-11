@@ -2,39 +2,43 @@
 
 <body>
     {% block content %}
-    <ul>
+    <ul id="Settings-Holder">
       <!--ScreenReader-->  
-    <li>
-        <li><button>Screenreader</button></li>
+    <li id="Screen-Reader">
+        <h3>Screenreader</h3>
         <ul>
             <li><button>On</button></li>
             <li><button>Off</button></li>
         </ul>
    
     <!--Text Size-->  
-    <li>
-        <li><button>Text Size</button></li>
+    <li id="Text-Size">
+        <h3>Text Size</h3>
         <ul>
             <li><button>+</button></li>
             <li><button>-</button></li>
         </ul>
 
     <!--Volume-->
-    <li>
-        <li><button>Volume</button></li>
+    <li id="Volume">
+        <h3>Volume</h3>
         <ul>
             <li><button>+</button></li>
             <li><button>-</button></li>
         </ul>
     
     <!--Text Boldness-->
-    <li>    
-        <li><button>Text Boldness</button></li>
+    <li id="Text-Boldness">    
+        <h3>Text Boldness</h3>
         <ul>
             <li><button>On</button></li>
             <li><button>Off</button></li>
 
     </ul>
+
+     <!--Home Button-->
+    <a href="/home"><button id="home-button">Go to Home</button></a>
+
     {% endblock %}
     
 </body>
