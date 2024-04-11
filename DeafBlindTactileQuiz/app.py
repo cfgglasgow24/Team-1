@@ -7,13 +7,14 @@ app = Flask(__name__, )
 
 @app.route('/')
 def accessibility():
+    sr.generate_mp3(render_template('popup.html'), "popup_audio.mp3")
     return render_template('popup.html')
 
 
 @app.route('/home/')
 def home():
+    sr.generate_mp3(render_template('home.html'), "home_audio.mp3")
     return render_template('home.html')
-
 
 @app.route("/quiz/")
 def quiz():
